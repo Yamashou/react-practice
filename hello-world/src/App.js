@@ -1,19 +1,26 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
+// }
+function Greeting(props) {
+  return (
+    <div>
+    <h1>{props.title}</h1>
+    <h2>{props.message}</h2>
+    <h3>{props.start_time}</h3>
+      <div class="offset-sm-2 col-sm-10 text-right">
+        <button type="button" onClick="location.href='/'" >一覧</button>
+      </div>
+    </div>
+  );
+}
+
 class App extends Component {
+
+
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <Greeting title="test" message="dasss" start_time="ok"/>
     );
   }
 }
